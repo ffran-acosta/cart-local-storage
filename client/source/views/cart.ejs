@@ -1,0 +1,66 @@
+<%- include('./partials/head.ejs') %> 
+<link rel="stylesheet" href="/css/cart.css">
+
+<%- include('./partials/header.ejs') %> 
+
+    <main id="main-cart">
+
+        <ul class="ul-cart">
+
+            <li class="li-cart">
+                <picture>
+                    <img src="/img/product.jpg">
+                </picture>
+
+                <section class="section-title">
+                    <p class="p-title">product 1</p>
+                </section>
+
+                <section class="section-quantity">
+                    <button class="decrement">-</button>
+                    <p class="p-quantity">1</p>
+                    <button class="increment">+</button>
+                </section>
+
+                <section class="section-price">
+                    <p class="p-price">100</p>
+                </section>
+                <button class="remove">X</button>
+            </li>
+
+            <li class="li-cart">
+                <picture>
+                    <img src="/img/product.jpg">
+                </picture>
+
+                <section class="section-title">
+                    <p class="p-title">product 1</p>
+                </section>
+
+                <section class="section-quantity">
+                    <button class="decrement">-</button>
+                    <p class="p-quantity">1</p>
+                    <button class="increment">+</button>
+                </section>
+
+                <section class="section-price">
+                    <p class="p-price">100</p>
+                </section>
+                <button class="remove">X</button>
+            </li>
+
+            <li class="li-cart li-total">
+                <button class="empty">VACIAR CARRITO</button>
+                <p class="total">TOTAL: <span>200</span></p>
+            </li>
+        </ul>
+
+    </main>
+
+    <div class="buy">
+        <a href=""><button>BUY NOW</button></a>
+    </div>
+    
+<script src="/scripts/script.js"></script>
+</body>
+</html>

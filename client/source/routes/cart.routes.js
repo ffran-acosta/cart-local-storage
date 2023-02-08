@@ -3,6 +3,7 @@ const router = Router()
 
 const controller = require('../controller/cart.controller');
 
-router.get('/', controller.test)
+router.get('/products', controller.products)
+router.get('/cart/resume', controller.cart)
 
 module.exports = router

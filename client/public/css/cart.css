@@ -1,0 +1,158 @@
+#main-cart{
+    display: flex;
+    width: 100%;
+    justify-content: centerl;
+}
+
+.ul-cart{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.li-cart{
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    height: 100px;
+    border-top: solid 1px #ccc;
+}
+
+.li-cart picture{
+    display: flex;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    padding: .5rem;
+}
+
+.li-cart picture{
+    width: 70px;
+    height: 70px;
+}
+
+.section-title{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    width: 40%;
+}
+
+.p-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.section-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+}
+
+.p-quantity{
+    font-size: 1.5rem;
+    padding: .6rem;
+}
+
+.section-quantity button{
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.decrement{
+    background-color: rgb(197, 57, 57);
+}
+
+.increment{
+    background-color: #279130;
+}
+
+.section-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.p-price{
+    font-size: 2rem;
+}
+
+.remove{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    bottom: 35px;
+    right: 2px;
+    border: none;
+    background-color: #fff;
+    color: rgb(255, 0, 55);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.li-total{
+    justify-content: space-between;
+}
+
+.total{
+    margin-right: 3rem;
+    font-size: 2rem;
+}
+
+.total span{
+    margin-left: .7rem;
+}
+
+.empty{
+    margin-left: 2rem;
+    border: none;
+    padding: .5rem;
+    background-color: rgb(197, 57, 57);
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy{
+    display: flex;
+    width: 100vw;   
+    justify-content: center;
+}
+
+.buy button{
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgb(27, 127, 214);
+}
+
+@media all and (min-width: 768px) {
+    .li-cart {
+        max-width: 800px;
+        margin: 0 10%;
+    }
+}
