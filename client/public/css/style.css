@@ -1,9 +1,91 @@
 @import url(header.css);
 @import url(footer.css);
 
-* {
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Tajawal', sans-serif;
+}
+
+#products-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin: auto;
+    background-color: #faf5f5;
+}
+
+.products-ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 2rem auto;
+}
+
+.product-li{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    margin: 1rem auto;
+    padding: 1rem ;
+}
+
+.product-li:hover{
+    box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.75);
+}
+
+.product-li picture{
+    width: 80%;
+}
+
+.product-li picture img{
+    width: 100%;
+}
+
+.product-li .text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.product-li section p{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.product-li .button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.product-li button{
+    width: 50%;
+    height: 2rem;
+    border: none;
+    background-color: rgb(49, 141, 223);
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.product-li button:hover{
+    background-color: rgb(27, 127, 214);
+}
+
+
+@media all and (min-width: 768px){
+    .product-li{
+        width: 45%;
+    }
+}
+
+@media all and (min-width:1200px){
+    .product-li {
+            width: 30%;
+        }
 }
