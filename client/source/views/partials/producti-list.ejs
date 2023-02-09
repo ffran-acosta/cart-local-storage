@@ -1,14 +1,14 @@
-            <li class="product-li">
-                <section >
-                    <picture>
-                        <img src="/img/product.jpg" alt="">
-                    </picture>
-                    <section class="text">
-                        <p class="product-name">product name</p>
-                        <p class="product-price">product price</p>
-                    </section>
-                    <section class="button">
-                        <button>Add to Cart</button>
-                    </section>
-                </section>
-            </li>
+    <li class="product-li">
+        <section>
+            <picture>
+                <img src="/img/product.jpg" alt="">
+            </picture>
+            <section class="text">
+                <p class="product-name"><%= product.title %></p>
+                <p class="product-price">$ <%= product.price %></p>
+            </section>
+            <section class="button">
+                <button data-id="<%= product.id %>" >Add to Cart</button>
+            </section>
+        </section>
+    </li>

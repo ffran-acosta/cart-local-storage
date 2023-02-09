@@ -4,55 +4,15 @@
 
     <main id="products-main">
 
-        <ul class="products-ul">
-
-            <li class="product-li">
-                <section >
-                    <picture>
-                        <img src="/img/product.jpg" alt="">
-                    </picture>
-                    <section class="text">
-                        <p class="product-name">product name</p>
-                        <p class="product-price">product price</p>
-                    </section>
-                    <section class="button">
-                        <button>Add to Cart</button>
-                    </section>
-                </section>
-            </li>
-
-
-            <li class="product-li">
-                <section>
-                    <picture>
-                        <img src="/img/product.jpg" alt="">
-                    </picture>
-                    <section class="text">
-                        <p class="product-name">product name</p>
-                        <p class="product-price">product price</p>
-                    </section>
-                    <section class="button">
-                        <button>Agregar</button>
-                    </section>
-                </section>
-            </li>
-
-            <li class="product-li">
-                <section>
-                    <picture>
-                        <img src="/img/product.jpg" alt="">
-                    </picture>
-                    <section class="text">
-                        <p class="product-name">product name</p>
-                        <p class="product-price">product price</p>
-                    </section>
-                    <section class="button">
-                        <button>Agregar</button>
-                    </section>
-                </section>
-            </li>
-            
-        </ul>
+        <% if (products.length > 0) { %>
+            <ul class="products-ul">
+                <% products.forEach(product => { %>
+                    <%- include('./partials/producti-list.ejs', {product:product}) %>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <h2>NO HAY PRODUCTOS</h2>
+        <% } %>
 
     </main>
 
