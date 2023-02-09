@@ -51,7 +51,7 @@
 
 .product-li section p{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: black;
 }
 
@@ -77,6 +77,9 @@
 
 
 @media all and (min-width: 768px){
+    #products-main{
+        width: 80vw;
+    }
     .product-li{
         width: 45%;
     }
