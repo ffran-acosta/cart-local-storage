@@ -1,25 +1,28 @@
+    <%let product = productsForCart.find(x=> { %>
+        <% if (x.id == element.id ) { %>
+            <% return x %>
+        <% } %>
+    <% }) %>
+    
     <li class="li-cart">
         <picture>
             <img src="/img/product.jpg">
         </picture>
 
         <section class="section-title">
-            <p class="p-title">product 1</p>
+            <p class="p-title"><%= product.title %></p>
         </section>
 
         <section class="section-quantity">
             <button class="decrement">-</button>
-            <p class="p-quantity">1</p>
+            <p class="p-quantity"><%= element.quantity %></p>
             <button class="increment">+</button>
         </section>
 
         <section class="section-price">
-            <p class="p-price">100</p>
+            <p class="p-price">$ <%= product.price * element.quantity  %></p>
         </section>
         <button class="remove">X</button>
+
     </li>
 
-    <li class="li-cart li-total">
-        <button class="empty">VACIAR CARRITO</button>
-        <p class="total">TOTAL: <span>200</span></p>
-    </li>

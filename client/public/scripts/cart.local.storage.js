@@ -1,7 +1,21 @@
+const cartQuantity = () => {
+    return localStorage.cart ? JSON.parse(localStorage.cart).length : 0
+}
+
+const sendCart = async (localStorash) => {
+    await fetch(`http://localhost:7010/cart/local-storage`, {
+        method: 'POST',
+        body: JSON.stringify(localStorash),
+        headers: { 'Content-Type': 'application/json'}
+    })
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    const addCartBtn = document.querySelectorAll('.add-cart')
+    const headerQuantity = document.querySelector('.quantity-header')
+    headerQuantity.innerText = cartQuantity()
 
+    const addCartBtn = document.querySelectorAll('.add-cart')
     addCartBtn.forEach(btn => {
         btn.addEventListener("click", (e) => {
                 
@@ -20,16 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
                         } return product
                     })
                 // PRODUCT FALSE, NEW OBJET
-                } else { updateCart.push({ id: parseInt(productId), quantity: 1 }) }
+                } else { 
+                    updateCart.push({ id: parseInt(productId), quantity: 1 })
+                    sendCart(updateCart) 
+                }
                 
                 //CART UPDATED
                 localStorage.setItem("cart", JSON.stringify(updateCart))
+                sendCart(updateCart)
 
             // CART LOCAL STORAGE FALSE
             } else {
                 localStorage.setItem("cart", JSON.stringify([{ id: parseInt(productId), quantity: 1 }]))
+                let ls = JSON.parse(localStorage.cart)
+                sendCart(ls)
             }
+            headerQuantity.innerText = cartQuantity()
 
+            
         })
     })
 })

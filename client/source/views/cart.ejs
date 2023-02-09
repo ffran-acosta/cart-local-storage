@@ -5,55 +5,23 @@
 
     <main id="main-cart">
 
+    <% if (lsCart) { %>
+
         <ul class="ul-cart">
+            <% lsCart.forEach(element => { %>
+                <%- include('./partials/cart-list.ejs', {element:element}) %>
 
-            <li class="li-cart">
-                <picture>
-                    <img src="/img/product.jpg">
-                </picture>
-
-                <section class="section-title">
-                    <p class="p-title">product 1</p>
-                </section>
-
-                <section class="section-quantity">
-                    <button class="decrement">-</button>
-                    <p class="p-quantity">1</p>
-                    <button class="increment">+</button>
-                </section>
-
-                <section class="section-price">
-                    <p class="p-price">100</p>
-                </section>
-                <button class="remove">X</button>
-            </li>
-
-            <li class="li-cart">
-                <picture>
-                    <img src="/img/product.jpg">
-                </picture>
-
-                <section class="section-title">
-                    <p class="p-title">product 1</p>
-                </section>
-
-                <section class="section-quantity">
-                    <button class="decrement">-</button>
-                    <p class="p-quantity">1</p>
-                    <button class="increment">+</button>
-                </section>
-
-                <section class="section-price">
-                    <p class="p-price">100</p>
-                </section>
-                <button class="remove">X</button>
-            </li>
+            <% }) %>
 
             <li class="li-cart li-total">
                 <button class="empty">VACIAR CARRITO</button>
-                <p class="total">TOTAL: <span>200</span></p>
+                <p class="total">TOTAL: </p>
             </li>
         </ul>
+
+    <% } else { %>
+        <h1>NO HAY PRODUCTOS EN EL CARRITO</h1>
+    <% } %>
 
     </main>
 
@@ -61,6 +29,6 @@
         <a href=""><button>BUY NOW</button></a>
     </div>
     
-<script src="/scripts/script.js"></script>
+<script src="/scripts/cart.local.storage.js"></script>
 </body>
 </html>

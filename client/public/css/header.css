@@ -24,3 +24,16 @@
 #header a:hover{
     color: rgb(219, 219, 219);
 }
+
+.quantity-header{
+    position: relative;
+    height: 5px;
+    width: 5px;
+    right: 20px;
+    bottom: 15px;
+    font-size: .65rem;
+    background-color: red;
+    border-radius: 60px;
+    padding: 0 2px;
+}
+    
