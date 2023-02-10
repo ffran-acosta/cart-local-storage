@@ -2,14 +2,6 @@ const cartQuantity = () => {
     return localStorage.cart ? JSON.parse(localStorage.cart).length : 0
 }
 
-const sendCart = async (localStorash) => {
-    await fetch(`http://localhost:7010/cart/local-storage`, {
-        method: 'POST',
-        body: JSON.stringify(localStorash),
-        headers: { 'Content-Type': 'application/json'}
-    })
-}
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const headerQuantity = document.querySelector('.quantity-header')

@@ -1,4 +1,4 @@
-    <%let product = productsForCart.find(x=> { %>
+    <% let product = productsForCart.find(x=> { %>
         <% if (x.id == element.id ) { %>
             <% return x %>
         <% } %>
@@ -14,15 +14,17 @@
         </section>
 
         <section class="section-quantity">
-            <button class="decrement">-</button>
-            <p class="p-quantity"><%= element.quantity %></p>
-            <button class="increment">+</button>
+            <button data-id="<%= element.id %>"  class="decrement">-</button>
+            <p data-id="<%= element.id %>" class="p-quantity"><%= element.quantity %></p>
+            <button data-id="<%= element.id %>"  class="increment">+</button>
         </section>
 
         <section class="section-price">
-            <p class="p-price">$ <%= product.price * element.quantity  %></p>
+            <p data-id="<%= element.id %>" class="p-price"> <%= product.price * element.quantity  %></p>
         </section>
-        <button class="remove">X</button>
+
+        <button data-id="<%= element.id %>" class="remove">X</button>
 
     </li>
+
 
