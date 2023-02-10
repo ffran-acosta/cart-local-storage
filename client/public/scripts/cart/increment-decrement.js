@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    //HTML ELEMENTS
     const incrementBtn = document.querySelectorAll('.increment')
     const decrementBtn = document.querySelectorAll('.decrement')
     const quantity = document.querySelectorAll('.p-quantity')
     const price = document.querySelectorAll('.p-price')
 
+    //LOCAL STORAGE
     let lsCart = JSON.parse(localStorage.cart)
-
-
 
     //INCREMENT FUNCTION
     incrementBtn.forEach(btn => {

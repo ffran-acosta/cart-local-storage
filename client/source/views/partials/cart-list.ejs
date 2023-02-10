@@ -1,10 +1,11 @@
+    
     <% let product = productsForCart.find(x=> { %>
         <% if (x.id == element.id ) { %>
             <% return x %>
         <% } %>
     <% }) %>
     
-    <li class="li-cart">
+    <li data-id="<%= element.id %>" class="li-cart">
         <picture>
             <img src="/img/product.jpg">
         </picture>

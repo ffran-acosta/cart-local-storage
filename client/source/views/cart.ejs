@@ -10,7 +10,6 @@
         <ul class="ul-cart">
             <% lsCart.forEach(element => { %>
                 <%- include('./partials/cart-list.ejs', {element:element}) %>
-
             <% }) %>
 
             <li class="li-cart li-total">
@@ -31,6 +30,8 @@
     
 <script src="/scripts/cart.local.storage.js"></script>
 <script src="/scripts/cart/increment-decrement.js"></script>
+<script src="/scripts/cart/remove-item.js"></script>
 <script src="/scripts/api.post.ls.js"></script>
+
 </body>
 </html>
