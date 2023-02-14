@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerQuantity = document.querySelector('.quantity-header')
     headerQuantity.innerText = cartQuantity()
 
+    // SEND LOCAL STORAGE TO BACKEND FOR RENDER THE CART
+    const cartIcon = document.querySelector('.icon')
+    cartIcon.addEventListener('click', () =>{
+        let cart = JSON.parse(localStorage.cart)
+        sendCart(cart)
+    })
+
     const addCartBtn = document.querySelectorAll('.add-cart')
     addCartBtn.forEach(btn => {
         btn.addEventListener("click", (e) => {
@@ -28,18 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 // PRODUCT FALSE, NEW OBJET
                 } else { 
                     updateCart.push({ id: parseInt(productId), quantity: 1 })
-                    sendCart(updateCart) 
                 }
                 
                 //CART UPDATED
                 localStorage.setItem("cart", JSON.stringify(updateCart))
-                sendCart(updateCart)
 
             // CART LOCAL STORAGE FALSE
             } else {
                 localStorage.setItem("cart", JSON.stringify([{ id: parseInt(productId), quantity: 1 }]))
-                let ls = JSON.parse(localStorage.cart)
-                sendCart(ls)
             }
             headerQuantity.innerText = cartQuantity()
 

@@ -19,7 +19,6 @@ module.exports = {
     test: async (req, res) => {
         let data = await req.body
         lsCart = data
-
     },
 
     cart: async (req, res) => {
