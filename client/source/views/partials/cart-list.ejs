@@ -21,7 +21,7 @@
         </section>
 
         <section class="section-price">
-            <p data-id="<%= element.id %>" class="p-price">$ <%= product.price * element.quantity  %></p>
+            <span>$</span><p data-id="<%= element.id %>" class="p-price"><%= product.price * element.quantity  %></p>
         </section>
 
         <button data-id="<%= element.id %>" class="remove">X</button>

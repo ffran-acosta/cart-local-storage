@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const decrementBtn = document.querySelectorAll('.decrement')
     const quantity = document.querySelectorAll('.p-quantity')
     const price = document.querySelectorAll('.p-price')
+    const total = document.querySelector('.total')
+
+    //TOTAL PRICE
 
     //LOCAL STORAGE
     let lsCart = JSON.parse(localStorage.cart)
@@ -39,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             //DISPLAT PRICE
             price.forEach(element => {
                 let textPriceParse = parseInt(element.innerText)
-                let originPrice = textPriceParse / (currentQuiantity)
+                let originPrice = textPriceParse / (currentQuiantity)            
                 if (element.dataset.id == button) {
                     element.innerText = (originPrice * (currentQuiantity + 1))
                 }
