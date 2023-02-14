@@ -5,7 +5,7 @@
 
     <main id="main-cart">
 
-    <% if (lsCart) { %>
+    <% if (lsCart && lsCart.length > 0) { %>
 
         <ul class="ul-cart">
             <% lsCart.forEach(element => { %>
@@ -28,10 +28,13 @@
         <a href=""><button>BUY NOW</button></a>
     </div>
     
-<script src="/scripts/cart.local.storage.js"></script>
-<script src="/scripts/cart/increment-decrement.js"></script>
-<script src="/scripts/cart/remove-item.js"></script>
-<script src="/scripts/api.post.ls.js"></script>
+    <!-- /cart -->
+    <script src="/scripts/cart/increment-decrement.js"></script>
+    <script src="/scripts/cart/remove-item.js"></script>
+    <script src="/scripts/cart/clear-cart.js"></script>
+    <!-- ./ -->
+    <script src="/scripts/api.post.ls.js"></script>
+    <script src="/scripts/cart.local.storage.js"></script>
 
 </body>
 </html>

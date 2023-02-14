@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    //HTML BTN
     const removeItem = document.querySelectorAll('.remove')
 
+    //LOCAL STORAGE
     let lsCart = JSON.parse(localStorage.cart)
 
+    //REMOVE SELECTION
     removeItem.forEach(btn => {
         btn.addEventListener("click", () => {
             let button = btn.dataset.id
@@ -12,7 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
             sendCart(test)
             location.reload()
         })
-    })
-        
-
+    })       
 })
