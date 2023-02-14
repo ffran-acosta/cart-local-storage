@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     //LOCAL STORAGE
     let lsCart = JSON.parse(localStorage.cart)
 
+    //SEND LOCAL STORAGE TO THE BACKEND
+    const logo = document.querySelector('.logo')
+    logo.addEventListener('click', () => {
+        sendCart(cart)
+    })
+
     //INCREMENT FUNCTION
     incrementBtn.forEach(btn => {
 
@@ -22,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 } return element
             })
             localStorage.setItem("cart", JSON.stringify(lsCart))
-            sendCart(lsCart)
 
             //DISPLAY QUANTITY
             quantity.forEach(element => {
@@ -58,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 } return element
             })
             localStorage.setItem("cart", JSON.stringify(lsCart))
-            sendCart(lsCart)
 
             //DISPLAY QUANTITY
             quantity.forEach(element => {
