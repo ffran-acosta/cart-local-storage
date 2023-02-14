@@ -4,6 +4,12 @@
     justify-content: centerl;
 }
 
+#main-cart h1 {
+    display: flex;
+    margin: auto;
+    padding: 3rem
+}
+
 .ul-cart{
     display: flex;
     flex-wrap: wrap;

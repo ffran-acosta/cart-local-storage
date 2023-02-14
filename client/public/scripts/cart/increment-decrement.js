@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const decrementBtn = document.querySelectorAll('.decrement')
     const quantity = document.querySelectorAll('.p-quantity')
     const price = document.querySelectorAll('.p-price')
-    const total = document.querySelector('.total')
-
-    //TOTAL PRICE
 
     //LOCAL STORAGE
     let lsCart = JSON.parse(localStorage.cart)

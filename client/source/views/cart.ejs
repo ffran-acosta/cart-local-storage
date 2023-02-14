@@ -23,10 +23,13 @@
     <% } %>
 
     </main>
+    
+    <% if (lsCart && lsCart.length > 0) { %>
+        <div class="buy">
+            <a href=""><button>BUY NOW</button></a>
+        </div>
+    <% } %>
 
-    <div class="buy">
-        <a href=""><button>BUY NOW</button></a>
-    </div>
     
     <!-- /cart -->
     <script src="/scripts/cart/increment-decrement.js"></script>
