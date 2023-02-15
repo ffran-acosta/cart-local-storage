@@ -1,4 +1,4 @@
-# cart-local-storage
+# CART WITH LOCAL STORAGE
 CART EXAMPLE using: MercadoPago API - JavaScript - EJS - CSS - PostgresSQL
 
 npm run build 
