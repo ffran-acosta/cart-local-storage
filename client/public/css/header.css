@@ -17,6 +17,10 @@
     color: #faf5f5;
 }
 
+#header i{
+    font-weight: bold;
+}
+
 .logo{
     text-decoration: none;
 }
@@ -27,12 +31,13 @@
 
 .quantity-header{
     position: relative;
+    color: red;
+    font-weight: bold;
     height: 5px;
     width: 5px;
     right: 20px;
     bottom: 15px;
     font-size: .65rem;
-    background-color: red;
     border-radius: 60px;
     padding: 0 2px;
 }

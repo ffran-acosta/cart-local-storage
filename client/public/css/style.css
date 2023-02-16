@@ -5,7 +5,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 #products-main{
@@ -52,6 +52,7 @@
 .product-li section p{
     text-decoration: none;
     font-size: 1.8rem;
+    font-weight: 300;
     color: black;
 }
 
