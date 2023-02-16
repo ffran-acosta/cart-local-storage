@@ -7,7 +7,7 @@ module.exports = {
     
     products: async (req, res) => {
         try {
-            const url = await axios.get(`http://localhost:7009/api/railway/products`)
+            const url = await axios.get(`https://cart-local-storage-production.up.railway.app/api/railway/products`)
             const products = await url.data.data
             productsForCart = await products
             return res.render('index', {products})
