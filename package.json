@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "buildclient": "cd client && npm install",
+    "buildserver": "cd server && npm install",
     "build": "cd client && npm install && cd .. && cd server && npm install",
     "server": "cd server && npm test",
     "client": "cd client && npm test"
