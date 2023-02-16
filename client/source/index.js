@@ -7,6 +7,9 @@ const {join} = require('path')
 const {port, start} = (require('./modules/server'))
 app.listen(port, start())
 
+//DOTENV
+require('dotenv').config
+
 //EJS
 app.set('views', join(__dirname, './views'))
 app.set('view engine', 'ejs')
