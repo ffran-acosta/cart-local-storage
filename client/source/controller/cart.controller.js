@@ -4,7 +4,6 @@ let lsCart
 let productsForCart
 
 module.exports = {
-    //FOR PRODUCT CRUD
     
     all: async (req, res) => {
         try {
@@ -27,29 +26,11 @@ module.exports = {
         }
     },
 
-    create: (req, res) => {
-        return res.render('create')
-    },
-
-    save: (req, res) => {
-        return res.redirect('/products')
-    },
-    edit: (req, res) => {
-        res.render('edit')
-    },
-    update: (req, res) => {
-
-    },
-    remove: (req, res) => {
-
-    },
-
-
-    //FOR CART RESUME
     localstg: async (req, res) => {
         let data = await req.body
         lsCart = data
     },
+
     cart: async (req, res) => {
         return await res.render('cart', {lsCart, productsForCart})
     }
