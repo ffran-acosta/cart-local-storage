@@ -28,10 +28,11 @@ module.exports = {
     },
 
     create: (req, res) => {
-        res.render('create')
+        return res.render('create')
     },
-    save: (req, res) => {
 
+    save: (req, res) => {
+        return res.redirect('/products')
     },
     edit: (req, res) => {
         res.render('edit')

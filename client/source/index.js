@@ -14,6 +14,10 @@ require('dotenv').config
 app.set('views', join(__dirname, './views'))
 app.set('view engine', 'ejs')
 
+//METHOD OVERRIDE
+const method = require('method-override')
+app.use(method('m'))
+
 //STATIC
 const statics = require('./modules/static')
 app.use(statics(join(__dirname, '../public')))

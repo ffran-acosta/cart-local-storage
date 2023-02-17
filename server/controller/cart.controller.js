@@ -26,4 +26,8 @@ module.exports = {
             console.log(err)
         }
     },
+
+    new: (req, res) => {
+
+    }
 }
