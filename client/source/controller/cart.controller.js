@@ -27,11 +27,21 @@ module.exports = {
         }
     },
 
-    create: () => {},
-    save: () => {},
-    edit: () => {},
-    update: () => {},
-    remove: () => {},
+    create: (req, res) => {
+        res.render('create')
+    },
+    save: (req, res) => {
+
+    },
+    edit: (req, res) => {
+        res.render('edit')
+    },
+    update: (req, res) => {
+
+    },
+    remove: (req, res) => {
+
+    },
 
 
     //FOR CART RESUME
