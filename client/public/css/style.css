@@ -87,6 +87,7 @@
     justify-content: center;
     margin-top: 1rem;
 }
+
 .product-li button{
     width: 50%;
     height: 2rem;
@@ -95,6 +96,12 @@
     color: white;
     outline: none;
     cursor: pointer;
+}
+
+.edit-delete{
+    display:flex;
+    width:100%;
+    margin-top: 2rem;
 }
 
 .product-li button:hover{

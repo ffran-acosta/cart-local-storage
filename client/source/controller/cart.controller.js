@@ -1,10 +1,10 @@
 const axios = require('axios')
 
-
 let lsCart
 let productsForCart
 
 module.exports = {
+    //FOR PRODUCT CRUD
     
     all: async (req, res) => {
         try {
@@ -27,11 +27,18 @@ module.exports = {
         }
     },
 
+    create: () => {},
+    save: () => {},
+    edit: () => {},
+    update: () => {},
+    remove: () => {},
+
+
+    //FOR CART RESUME
     localstg: async (req, res) => {
         let data = await req.body
         lsCart = data
     },
-
     cart: async (req, res) => {
         return await res.render('cart', {lsCart, productsForCart})
     }

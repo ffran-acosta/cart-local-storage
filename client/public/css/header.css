@@ -13,8 +13,11 @@
 }
 
 #header a{
+    display:flex;
     font-size: 2rem;
     color: #faf5f5;
+    align-items: center;
+    text-decoration:none;
 }
 
 #header i{
@@ -41,4 +44,13 @@
     border-radius: 60px;
     padding: 0 2px;
 }
-    
+
+#header button{
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    background-color: #fff;
+    color: rgb(49, 141, 223);
+    outline: none;
+    cursor: pointer;
+}
