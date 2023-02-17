@@ -1,13 +1,14 @@
 const axios = require('axios')
 
+
 let lsCart
 let productsForCart
 
 module.exports = {
     
-    products: async (req, res) => {
+    all: async (req, res) => {
         try {
-            const url = await axios.get(`https://cart-server.up.railway.app/api/railway/products` || process.env.URL_SERVER_PRODUCTS)
+            const url = await axios.get(process.env.URL_SERVER_PRODUCTS || `http://localhost:7009/api/products`)
             const products = await url.data.data
             productsForCart = await products
             return res.render('index', {products})
@@ -16,7 +17,17 @@ module.exports = {
         }
     },
 
-    test: async (req, res) => {
+    one: async (req, res) => {
+        try {
+            const url = await axios.get(process.env.URL_SERVER_PRODUCTS || `http://localhost:7009/api/products`)
+            const product = await url.data.data.find(x => x.id == req.params.id)
+            return res.render('detail', { product })
+        } catch (err) {
+            console.log(err)
+        }
+    },
+
+    localstg: async (req, res) => {
         let data = await req.body
         lsCart = data
     },

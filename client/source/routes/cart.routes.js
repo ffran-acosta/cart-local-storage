@@ -3,8 +3,14 @@ const router = Router()
 
 const controller = require('../controller/cart.controller');
 
-router.get('/products', controller.products)
+//PRODUCT LIST
+router.get('/products', controller.all)
+//PRODUCT DETAIL
+router.get('/products/detail/:id', controller.one)
+
+//CART RESUME
 router.get('/cart/resume', controller.cart)
-router.post('/cart/local-storage', controller.test)
+//CART LOCALSTORAGE TO BACKEND
+router.post('/cart/local-storage', controller.localstg)
 
 module.exports = router
