@@ -2,9 +2,8 @@
 
 <%- include('./partials/header.ejs') %> 
 
-    <main >
+    <main id="main-detail">
         <li class="product-li">
-            <a class="product-a" href="/products/detail/<%=product.id  %>">
                 <section>
                     <picture>
                         <img src="/img/product.jpg" alt="product-img">
@@ -13,15 +12,18 @@
                         <p class="product-name"><%= product.title %></p>
                         <p class="product-price">$ <%= product.price %></p>
                     </section>
+                    <section class="descrption">
+                        <h2>DESCRIPTION</h2>
+                    </section>  
                     <section class="button">
                         <button class="add-cart" data-id="<%= product.id %>" >Add to Cart</button>
                     </section>
                 </section>
-            </a>
-    </li>
+        </li>
     </main>
 
-    
-<%- include('./partials/footer.ejs') %> 
+
+<script src="/scripts/detail.local.storage.js"></script>
+<script src="/scripts/api.post.ls.js"></script>
 </body>
 </html>
